@@ -3,37 +3,34 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import  {AuthContext}  from "../authcontext/autoCont";
+import { AuthContext } from "../authcontext/AuthContext";
 
-
-
-
-
-function LoginForm() { 
+function Register() {
     const { register, handleSubmit } = useForm();
-    const  { registerUser } = useContext(AuthContext);
+    const { registerUser } = useContext(AuthContext);
 
     const history = useHistory();
 
-    function onSubmit(data) { 
-        if(data.username === "Admin" && data.password === "Admin") { 
-            localStorage.setItem("username","Admin");
-            localStorage.setItem("password","Admin"); 
-            registerUser(data.username);
-            history.push("/admin");
-            
-        }
-    }     
-
+    function onSubmit(data) {
+        console.log("data", data);
+        registerUser(data.username);
+        history.push("/admin");
+    }
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
-            <input name = "username" placeholder="Enter Username" ref={register} type = "text" />
-            <input name = "password" placeholder="Enter Username" ref={register} type = "password" />
-            <Button type = "submit">Submit</Button>
+            <h1>Login</h1>
+            <Form.Group>
+                <Form.Label>Name</Form.Label>
+                <Form.Control name="username" placeholder="Enter your username" ref={register} />
+                <Form.Control name="password" placeholder="Enter your password" ref={register} />
+
+            </Form.Group>
+
+            <Button type="submit">Submit</Button>
         </Form>
-    )
+    );
 }
 
+export default Register;
 
-export default LoginForm;

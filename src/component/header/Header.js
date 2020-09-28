@@ -5,6 +5,7 @@ import HomePage from "../home/Home";
 import Login from "../login/Login";
 import Admin from "../admin/Admin";
 import ProtectedRoute from "../routes/routes";
+import { AuthContextProvider } from "../authcontext/AuthContext";
 
 
 
@@ -13,6 +14,7 @@ function HeaderFrom () {
     console.log(user); 
         
         return( 
+            <AuthContextProvider>
             <Router>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/login">Login</NavLink>                
@@ -27,6 +29,7 @@ function HeaderFrom () {
            
             </Switch>
              </Router>
+             </AuthContextProvider>
            
 
         );
