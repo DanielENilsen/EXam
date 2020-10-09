@@ -2,14 +2,13 @@ import React, { createContext, useState } from "react";
 
 const AuthContext = createContext();
 
-const AuthContextProvider = ({ children }) => {
-    const existingUser = localStorage.getItem("user") || null;
-    const existingpassword = localStorage.getItem("password") || null;
+const SecureAuthSystem = ({ children }) => {
+    const checkExistingUser = localStorage.getItem("user") || null;
+    const chechExistingPassword = localStorage.getItem("password") || null;
+    const [user, setUser] = useState(checkExistingUser);
+    const [password, setPassword] = useState(chechExistingPassword);
 
-    const [user, setUser] = useState(existingUser);
-    const [password, setPassword] = useState(existingpassword);
-
-    function registerUser(username,password) {
+    function logInUser(username,password) {
         localStorage.setItem("user", JSON.stringify(username));
         localStorage.setItem("password", JSON.stringify(password));
 
@@ -24,7 +23,7 @@ const AuthContextProvider = ({ children }) => {
         localStorage.removeItem("password");
 
     } 
-    return <AuthContext.Provider value={{ user, password, registerUser, logout }}>{children}</AuthContext.Provider>;
+    return <AuthContext.Provider value={{ user, password, logInUser, logout }}>{children}</AuthContext.Provider>;
 };
 
-export { AuthContext, AuthContextProvider };
+export { AuthContext, SecureAuthSystem };

@@ -1,46 +1,51 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "../home/Home";
 import Login from "../login/Login";
 import Admin from "../admin/Admin";
 import ProtectedRoute from "../routes/routes";
-import { AuthContextProvider } from "../authcontext/AuthContext";
-
+import { SecureAuthSystem } from "../authcontext/AuthContext";
+import Navbar from "../nav/Nav";
+import ViewALL from "../viewAll/ViewAll";
+import Logo from "../../img/Logo.png";
+import ContactUS from "../contactus/ContactUs";
+import HotelCard from "../HotelCardSpec/HotelCard";
 
 
 function HeaderFrom () { 
-    const user = localStorage.getItem("username");    
-    console.log(user); 
         
         return( 
-            <AuthContextProvider>
-            <Router>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/login">Login</NavLink>                
-      
-            <Switch>
-                <Route path="/" exact component={HomePage} />  
-                <Route path="/login" exact component={Login} />             
-                <ProtectedRoute path="/admin" exact component={Admin} />                     
-             
-
-            
+            <SecureAuthSystem>
+                <Router>
+                    <div className = "navbarinner">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div className="container">
+                            <a className="navbar-brand" href="#">
+                                <img src={Logo} className = "navbarinner__image"  to="/" />
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div className="collapse navbar-collapse" id="navbarResponsive">                           
+                                <Navbar />                            
+                            </div>  
+                        </div>
+                    </nav>
+                </div>
+                <Switch>
+                    <Route path="/" exact component={HomePage} />                   
+                    <Route path="/viewALL" exact component={ViewALL} />
+                    <Route path="/contactus" exact component={ContactUS} />
+                    <Route path="/login" exact component={Login} />
+                    <Route path="/hotelpage/:id" exact component={HotelCard} />
+                    <ProtectedRoute path="/admin" exact component={Admin} />                    
+                </Switch>
+                </Router>
+             </SecureAuthSystem>
            
-            </Switch>
-             </Router>
-             </AuthContextProvider>
-           
 
-        );
-    
+        );  
     
 }
 
 export default HeaderFrom;
-
-/* <div className = "header">                              
-
-                <h1>{this.state.Text}</h1>
-                <button onClick={this.chancheState}>{this.state.Text}</button>
-            </div>*/

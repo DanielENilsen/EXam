@@ -1,0 +1,37 @@
+import React from 'react';
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import { BASE_URL,headers } from '../apiBackend/ApiCall';
+
+function ContactUS() { 
+
+    const history = useHistory();
+    const { register, handleSubmit } = useForm();
+
+
+    var onSubmit = async function (data) {
+        const createURl = `${BASE_URL}contacts`;
+        const contactPOST = { headers, method: "POST", body: JSON.stringify(data)};        
+        await fetch(createURl, contactPOST).then((r) => r.json()).then((j) => console.log(j)).catch((error) => console.log(error))
+        history.push("/");
+    }
+
+
+    return(
+        <div className = "col-lg-4 col-xl-4 formCLa">           
+            <Form onSubmit={handleSubmit(onSubmit)}className= "addNewHOtel">
+            <h6 className = "col-lg-12 col-xl-12 addNewHOtel__text">Feel free to send us a message </h6>
+                <Form.Control className= "addNewHOtel__input" name="name"  placeholder="Hotel Name" ref={register} />
+                <Form.Control className= "addNewHOtel__input" name="email"  placeholder="Hotel Name" ref={register} />
+                <Form.Control className= "addNewHOtel__textbox" as="textarea" rows="3" name="message"  ref={register} />
+                <Button className="addNewHOtel__submit btn btn-secondary" type="submit">Submit</Button>                        
+            </Form>
+        </div>
+            
+    );
+
+}
+
+export default ContactUS;

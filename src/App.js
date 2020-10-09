@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './style/App.scss';
 import HeaderFrom from "./component/header/Header"
 
 function App() {

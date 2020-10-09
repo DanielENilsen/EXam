@@ -5,32 +5,34 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { AuthContext } from "../authcontext/AuthContext";
 
-function Register() {
+function LoginSystem() {
     const { register, handleSubmit } = useForm();
-    const { registerUser } = useContext(AuthContext);
-
+    const { logInUser } = useContext(AuthContext);
     const history = useHistory();
 
     function onSubmit(data) {
-        console.log("data", data);
-        registerUser(data.username);
-        history.push("/admin");
+        if(data.username === "Admin" && data.password === "Admin") {
+            logInUser(data.username, data.password)
+            history.push("/admin");
+        } else {
+           console.log("Error");
+        }       
     }
 
+
     return (
-        <Form onSubmit={handleSubmit(onSubmit)}>
-            <h1>Login</h1>
-            <Form.Group>
-                <Form.Label>Name</Form.Label>
-                <Form.Control name="username" placeholder="Enter your username" ref={register} />
-                <Form.Control name="password" placeholder="Enter your password" ref={register} />
-
-            </Form.Group>
-
-            <Button type="submit">Submit</Button>
-        </Form>
+        <div className = "col-lg-4 col-xl-4 formCLa">  
+            <Form  className = "addNewHOtel" onSubmit={handleSubmit(onSubmit)}>
+                <h1 className = "col-lg-12 col-xl-12 addNewHOtel__text">Please Login </h1>
+                <Form.Group>
+                    <Form.Control className = "addNewHOtel__input" name="username" type="text" placeholder="Enter your username" ref={register} />
+                    <Form.Control className = "addNewHOtel__input" name="password" type="password" placeholder="Enter your username" ref={register} />                               
+                </Form.Group>
+                <Button className="addNewHOtel__submit btn btn-secondary" type="submit">Submit</Button>
+            </Form>
+        </div>
     );
 }
 
-export default Register;
+export default LoginSystem;
 
