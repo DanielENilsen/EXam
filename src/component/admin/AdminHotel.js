@@ -3,6 +3,11 @@ import {headers, BASE_URL} from "../apiBackend/ApiCall";
 import  { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card';
+
 function ListHotel() { 
     const [allHote, SetCurrectHotel] = useState([]);
     const url =  BASE_URL + "establishments";
@@ -17,15 +22,21 @@ function ListHotel() {
 
 
     return (
-        <div className = "listName">
-            <div className = "allHote">
-                {allHote.map((hotel) => {
-                    return(
-                        <li key={hotel.id}><NavLink to={`/admin/hotels/edit/${hotel.id}`}>{hotel.name}</NavLink></li>
-                        );
-                    })}               
-            </div>            
-        </div>
+        <div className = "listApp">
+       
+                           {allHote.map((hotel) => {
+                        return(                          
+                                <ul class="list-group">
+                                    <li  className = "list-group-item listApp__list" key={hotel.id}><NavLink to={`/admin/hotels/edit/${hotel.id}`}>{hotel.name}</NavLink></li>
+                                </ul>
+                      
+                            
+                          
+                            );
+                        })}
+                     
+        </div>                
+     
     );
 }
 

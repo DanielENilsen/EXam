@@ -32,7 +32,7 @@ function DeleteHotel(props) {
     }
 
     return (
-        <Button  onClick={checkDelete}>
+        <Button className = "edithForm__button" onClick={checkDelete}>
             Delete
         </Button>
     );

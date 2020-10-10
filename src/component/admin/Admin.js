@@ -1,12 +1,11 @@
 import React from 'react';
-import AdminHeader from '../adminHeader/adminHeader';
 import NavBarAdmin from "../adminHeader/NavBarAdmin";
 
 
 function Admin() { 
     return(
         <div className = "admin">
-            <h1>Welcome to Admin</h1>
+            <h1 className = "admin__text">Welcome to Admin</h1>
             <NavBarAdmin />
                                
         </div>

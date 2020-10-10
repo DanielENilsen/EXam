@@ -49,34 +49,30 @@ function EdithHotel() {
 
 
     return (
-        <>
-            <Form onSubmit={handleSubmit(onSubmit)}>
-                <h1>Edit Hotel</h1>
-                <Form.Group>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control name="name" defaultValue={hotel.name} placeholder="Enter a name for the hotel" ref={register} />
-                </Form.Group>
+        <div className = "edithForm">     
+                <Form onSubmit={handleSubmit(onSubmit)}>
+                    <h3 className = "edithForm__header">Edit Hotel</h3>
+                    <Form.Group>
+                        <Form.Label className = "edithForm__label" >Name</Form.Label>
+                        <Form.Control  className = "edithForm__input" name="name" defaultValue={hotel.name} placeholder="Enter a name for the hotel" ref={register} />
+                    </Form.Group>
 
-                <Form.Group>
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control name="email" defaultValue={hotel.email} placeholder="Enter an email address" ref={register} />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label>Picture</Form.Label>
-                    <Form.Control name="image" defaultValue={hotel.image} ref={register} />
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label>Picture</Form.Label>
-                    <Form.Control name="description" defaultValue={hotel.description} ref={register} />
-                </Form.Group>
-
-
-                <Button type="submit">Update</Button>
-            </Form>
-            <DeleteHotel id={id} />
-
-            
-        </>
+                    <Form.Group>
+                        <Form.Label className = "edithForm__label" >Email</Form.Label>
+                        <Form.Control className = "edithForm__input" name="email" defaultValue={hotel.email} placeholder="Enter an email address" ref={register} />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label className = "edithForm__label">Picture</Form.Label>
+                        <Form.Control className = "edithForm__input" name="image" defaultValue={hotel.image} ref={register} />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label className = "edithForm__label" >Text</Form.Label>
+                        <Form.Control className = "edithForm__textArea" name="description" as="textarea" defaultValue={hotel.description} ref={register} />
+                    </Form.Group>
+                    <Button  className = "edithForm__button" type="submit">Update</Button>
+                    <DeleteHotel id={id} />  
+                </Form>                        
+              </div>
     );
 }
 

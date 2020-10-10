@@ -3,16 +3,12 @@ import {headers, BASE_URL} from "../apiBackend/ApiCall";
 import  { useState, useEffect } from "react";
 
 
-
-
-
 function AdminContact() {
-
+        
+           
     const [masseage,setMassage] = useState([]);
     const Url = `${BASE_URL}contacts`;
     const masseageFetch = { headers };
-
-
 
     useEffect(() => {
         fetch(Url,masseageFetch).then((reponse) => reponse.json()).then((hotelJson) => {
@@ -22,25 +18,23 @@ function AdminContact() {
     }, []);
 
     
-
-
-
    return (
-       <div >
-           <h1>Meassage</h1>
-           <div className = "">
-               <div>
-                   {masseage.map((massage) => {
-                       return (
-                           <div className = "loginForm addNewHOtel">
-                               <h3>{massage.name}</h3>
-                           </div>
-                       );
-                    })} 
-               </div>            
-               
-           </div>
-
+            <div className = "meassageHotel">                
+            <div>
+                {masseage.map((massage) => {
+                    return (
+                       <ul class="list-group meassageHotel__box">
+                           <div className = "list-group-item">                               
+                                <h3>{massage.name}</h3>
+                                <div className = "meassageHotel__inner">
+                                    <h6>{massage.email}</h6>
+                                    <p className = "meassageHotel__text">{massage.message}</p>
+                                </div>                                   
+                            </div>
+                        </ul>
+                    );
+                })} 
+            </div>   
        </div>
    );
 }

@@ -17,9 +17,9 @@ function NavBarAdmin() {
         <SecureAuthSystem>
             <Router>
                 <div className = "headerLink">
-                    <NavLink to="/listHotel">All Hotels</NavLink>
-                    <NavLink to="/massage">Massage</NavLink>                
-                    <NavLink to="/addhotel">Add Hotels</NavLink>                    
+                    <NavLink className = "headerLink__link" to="/listHotel">Edit Hotels</NavLink>
+                    <NavLink className = "headerLink__link" to="/massage">Meassages</NavLink>                
+                    <NavLink className = "headerLink__link" to="/addhotel">Add Hotels</NavLink>                    
                 </div>            
             <Switch>             
                 <ProtectedRoute path="/listHotel" exact component={ListHotel} />

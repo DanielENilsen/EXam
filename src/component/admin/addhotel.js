@@ -31,8 +31,10 @@ function AddHotel() {
             <Form onSubmit={handleSubmit(onSubmit)} className= "loginForm addNewHOtel">
                 <h1 className = "loginForm__header">Add New Hotel</h1>
                 <Form.Control className= "loginForm__input" name="name"  placeholder="Hotel Name" ref={register} />
-                <Form.Control className= "loginForm__input" name="email" placeholder="Hotel email" ref={register} />
-             
+                <Form.Control className= "loginForm__input" name="email" placeholder="Email" ref={register} />
+                <Form.Control className= "loginForm__input" name="image" placeholder="Image" ref={register} />
+                <Form.Control className= "loginForm__input" name="description" placeholder="description" ref={register} />
+                <Form.Control className= "loginForm__input" name="price" placeholder="Price" ref={register} />
                <Button className="loginForm__submit btn btn-secondary" type="submit">Submit</Button>                        
             </Form>            
         </div>
