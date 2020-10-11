@@ -27,6 +27,7 @@ function AddHotel() {
     }
 
     return (
+      
         <div className = "col-lg-5 col-xl-5">
             <Form onSubmit={handleSubmit(onSubmit)} className= "loginForm addNewHOtel">
                 <h1 className = "loginForm__header">Add New Hotel</h1>
@@ -38,6 +39,7 @@ function AddHotel() {
                <Button className="loginForm__submit btn btn-secondary" type="submit">Submit</Button>                        
             </Form>            
         </div>
+      
     );
 }
 export default AddHotel;

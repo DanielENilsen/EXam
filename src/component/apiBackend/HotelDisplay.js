@@ -34,12 +34,14 @@ function Hotels() {
             <Row>
                 {allHotel.map(hotel => {
                     return (
-                        <Col  lg={3} className="boxGridHotels">
+                        <Col lg={3} className="boxGridHotels">
                             <Card>
-                                <Card.Img className = "boxGridHotels__image" src={hotel.image}/>                     
-                                <h3 className = "boxGridHotels__header">{hotel.name}</h3>
-                                <p className = "boxGridHotels__text">{hotel.description}</p>
-                                <NavLink className = "boxGridHotels__link" to = {`/hotelpage/${hotel.id}`}>See more</NavLink>
+                                <Card.Img className = "boxGridHotels__image" src={hotel.image}/>  
+                                <Card.Body>                  
+                                    <h3 className = "boxGridHotels__header">{hotel.name}</h3>
+                                    <p className = "boxGridHotels__text">{hotel.description}</p>   
+                                    </Card.Body>                               
+                                    <NavLink className = "boxGridHotels__link" to = {`/hotelpage/${hotel.id}`}>See more</NavLink>
                             </Card>
                         </Col>
                     );

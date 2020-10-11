@@ -4,11 +4,10 @@ import NavBarAdmin from "../adminHeader/NavBarAdmin";
 
 function Admin() { 
     return(
-        <div className = "admin">
-            <h1 className = "admin__text">Welcome to Admin</h1>
-            <NavBarAdmin />
-                               
-        </div>
+            <div className = "admin">
+                <h1 className = "admin__text">Welcome to Admin</h1>
+                <NavBarAdmin />                                
+            </div>
 
     );
 }

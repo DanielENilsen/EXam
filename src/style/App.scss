@@ -253,13 +253,10 @@ body {
     margin-bottom: 100px;
     object-fit: cover; 
     animation: animatationnOne 2s;
-    
-    
-    
 
     &__image {            
-        height: 20vh;     
-        
+        height: 30vh;  
+        object-fit: cover;      
     }
 
     &__header {
@@ -295,24 +292,57 @@ body {
 
 .hotelSpec {   
     margin-top:10%;
-    width: 95%;
+    width: 90%;
     background-color: rgb(255, 255, 255);
-    margin-left:3%;        
+    margin-left:5%;        
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
        
     
     &__headerText  {        
-        text-align: center;
-        margin: 0.5em;
+        text-align: center;   
+        font-family: 'Cinzel', serif;        
+        background-color:#1e2124;
+        color:$YellowButtoNCOlor;
+        padding: 0.6em;
+    }  
+    
+    &__image { 
+        width: 100%;
+        
+
+        object-fit:cover ;        
+    }
+
+    &__text { 
+        margin-left: 5%;
+        width:90%;
+    }
+
+    &__info {
+        font-size: 0.9em;
+        margin-left: 7%;
+        padding-bottom: 3%;
+        font-weight: 400;     
+    }
+
+    &__email {
+        padding-bottom: 5%;
+        margin-left: 3.5%;
+    }
+
+    &__span {
         font-family: 'Cinzel', serif;
-    }    
+
+        color:$YellowButtoNCOlor;
+        font-weight: 500;
+    }
 
 }
 
 .headerLink  { 
-    margin-top: 10%;   
+    margin-top: 10%; 
 
     &__link {
         font-family: 'Baloo Chettan 2', cursive;   
@@ -346,10 +376,16 @@ body {
 }
 
 .listApp {
-    margin-top:25%;
+    margin-top:5%;
+    padding-top: 8%;    
     width: 90%;
     margin-bottom: 10%;
+    padding-bottom: 3%;
     margin-left: 5%;
+
+    &__list { margin-left: 15%;
+        width: 70%;
+    }
     
     a {
         color:rgb(31, 28, 28);
@@ -403,19 +439,38 @@ body {
     }
 }
 
+.innerBox { 
+    height: auto;
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
+    width: 85%;
+    margin-left: 5%;
+    
 
-.meassageHotel {
+}
+
+.meassageHotel {    
     margin-top: 15%;
     width: 90%;
     margin-left: 5%;
+    padding-top:10px;
+    padding-bottom: 5%;
+    
 
-    &__icon {
-        float: right;
-    }
-
-    &__box {
+    
+     &__box {
+        
         margin-top: 3%;
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
+    
+
     }
+
 
    
 
@@ -429,6 +484,7 @@ body {
 
 
 .hotelCardSpec { 
+    width: 80%;
 
 
     &__firstCol {
@@ -530,6 +586,24 @@ body {
 
 
 @media (orientation: landscape) {
+
+    .boxGridHotels  {
+        &__image {            
+            height: 80vh;  
+            object-fit: cover;      
+        }
+    }
+    
+
+    .admin {
+        height: 55vh;
+    }
+
+    .headerLink {
+        margin-left: 20%;
+    }
+
+    
     .loginForm {
         height: 120vh;
         
@@ -564,9 +638,40 @@ body {
         }
     }
 
-    .hotelSpec { 
+    .hotelSpec {   
+       
         
-        margin-bottom: 10%;
+        &__headerText  {        
+            text-align: center;
+            margin: 0.5em;
+            font-family: 'Cinzel', serif;
+        }  
+        
+        &__image { 
+            width: 100%;
+            object-fit: cover;
+            
+        }
+    
+        &__text { 
+            margin-left: 5%;
+            width:90%;
+    
+        }
+    
+        &__info {
+            font-size: 0.9em;
+            margin-left: 7%;
+            padding-bottom: 3%;
+            font-weight: 400;     
+        }
+    
+        &__email {
+            padding-bottom: 5%;       
+            margin-left: 5%;
+        }    
+       
+    
     }
 
     .addNewHOtel { 
@@ -584,10 +689,30 @@ body {
         &__submit {
             font-size:1.5em;
         }
-    }    
+    }  
+    
+    
+    .headerLink  {       
+       
+    
+        &__link {
+            font-family: 'Baloo Chettan 2', cursive;   
+            font-family: 'Cinzel', serif;
+            padding:0.5em;
+            border-radius: 10px 10px;
+            background-color: #1e2124;
+            margin-left:3%;
+            color: $YellowButtoNCOlor;
+            font-size:90%;
+        } 
+      
+    }
+    
+    
+
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 320px) {
 
         
     .admin {
@@ -602,13 +727,27 @@ body {
 
     }
     .headerLink  {        
-        margin-left:8%;      
-       
+        margin-left:0%; 
+
+        &__link {
+          
+            padding:0.3em;
+            
+        }    
+      
     }
-    
+    .hotelSpec {     
+        
+        &__headerText { 
+            font-size: 2em;
+            padding: 0.6em;
 
-
-
+        }
+        &__info {
+            font-size:0.8em;
+             
+        }
+    }  
 }
 
 @media only screen and (min-width: 768px) {
@@ -627,74 +766,109 @@ body {
             margin-left:3%;
             color: $YellowButtoNCOlor;
             font-size:120%;
-        }
+        }     
     
-        &__link:hover { 
-            
-        }
-      
-    
-      
     }
-    
 
+    .hotelSpec { 
+        
 
-
+        font-size:1.4em; 
+        
+        &__email {
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        &__info {
+            font-size:1em;             
+        }
+    }
 }
 
 
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1250px) {
 
-    .hotelCardSpec { 
-        &__firstCol {
-            margin-top: 5%;  
-             
+    .boxGridHotels  {
+        padding-left:3%;
+        margin-top:4%;
+        margin-bottom: 100px;
+        object-fit: cover; 
+        animation: animatationnOne 2s;     
+
+        &__image {            
+            height: 20vh;
+            object-fit: cover;
             
-            img {
-                margin-bottom: 5%;
-                margin-left: 5%;
-            }  
         }
-        
-        &__seconCol { 
-            background-color:#1e2124;
-            -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
-            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
-            margin-left: 5%;
-            margin-top: 5%;  
-            color:$YellowButtoNCOlor;
-            text-align: center;    
+    
+        &__header {            
+            padding: 0.6em;
+                        
+        }
+    
+        &__text {     
             height: auto;
+            max-height: 250px;       
+            margin: 5%;            
         }
 
-        &__description {
-            margin-top: 5%; 
-            font-size: 1.7em;
+        &__link {
+            padding:1em;       
+            margin-bottom: 5%;
+            margin-left:5%;
+            height: auto;
+            max-height: 250px
+             
+        }   
+    }
 
-        }
+    .hotelSpec {   
+        margin-top:5%;
+        margin-left: 30vw;
+        width: 36%;   
+        height: auto;   
+        margin-bottom: 100px; 
 
-        &__headerText {
-            padding-top: 12%;            
-            margin-left: 10%;
-            font-size: 3.5em;
+        &__headerText  {        
+            margin: 0em;
+            font-size:1.5em;
+            margin-bottom: 5%;            
+        }  
+        
+        &__image {             
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+          
+             
         }
-      
+    
+        &__text { 
+            margin-left: 5%;
+            width:90%;
+            font-size:1em;
+            padding-bottom: 3%;
+        }
+    
         &__info {
-            margin-top: 5%; 
-            margin-left: 10%;
-            margin-bottom: 10%;
-            font-size: 1.3em;
+            font-size:1.1em;
+            margin-left: 6%;
+            padding-bottom: 3%;
+               
+        }
+    
+        &__email {
+            padding-bottom: 6%;
+            margin-left: 4%;
+        }
+    
+        &__span {
             font-family: 'Cinzel', serif;
     
+            color:$YellowButtoNCOlor;
+            font-weight: 500;
         }
-
-        &__link {           
-            margin-left: 40%;           
-            height: 200px;                    
-            border-radius: 10px 10px;   
-        }
-
+    
     }
 
     .formCLa { 
@@ -732,9 +906,34 @@ body {
             margin-bottom: 5%;
             font-weight: bold;
             
+        }       
+     }
+
+     .admin {
+        height: 25vh;
+
+        &__text {
+            text-align: center;
+            font-size:5em;
         }
         
-      
     }
 
+    .headerLink {
+        margin-left: 0%;
+        text-align: center;
+        
+        &__link {
+            font-family: 'Cinzel', serif;
+            padding:0.1em;
+            background-color: #ffffff;
+            margin-left:3%;
+            color: black;
+            font-size:160%;
+        }
+
+    }
+
+
+  
 }

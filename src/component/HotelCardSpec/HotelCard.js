@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { BASE_URL, headers } from "../apiBackend/ApiCall"
 import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-
-
-
 
 
 function HotelCard() {
@@ -25,37 +21,34 @@ function HotelCard() {
         .catch((error) => console.log(error));
 
     }, []);
-/*This secluded wilderness cabin is the perfect spot for a restful and cosy getaway.*/
+
     return (    
             <div className = "hotelSpec">
-                <div className = "conteiner">
-                    <div className = "row">
-                        <div className = "col-xl-6 col-lg-6 hotelCardSpec__firstCol">
-                            <img className = "col col-xl-12" src={hotel.image} />
-                        </div>
-                        <div className = "col-xl-5 col-lg-5 hotelCardSpec__seconCol">
-                            <h1 className = "col-xl-10 hotelCardSpec__headerText">{hotel.name}</h1>
+                    <div className = "innerHhtml">
+                        <img className = "hotelSpec__image" src={hotel.image} />  
+                        </div>                   
+                        <div>
+                            <h1 className = "hotelSpec__headerText ">{hotel.name}</h1>
                             <div>
-                                <p className = "col-xl-12 col-lg-12 hotelCardSpec__description">{hotel.description}</p>
-                                <div className = "hotelCardSpec__inner">                                   
+                                <p className = "hotelSpec__text">{hotel.description}</p>
+                                <div className = "conteiner-fluid">                                   
                                     <div className = "row">
-                                        <h6 className = "hotelCardSpec__info col-sm-3 col-xl-1">Price: {hotel.price} kr</h6>
-                                        <h6 className = "hotelCardSpec__info col-sm-3 col-xl-1">Rooms: {hotel.maxGuests}</h6>
+                                        <h6 className = "hotelSpec__info">Price: <span className="hotelSpec__span">{hotel.price} kr</span></h6>
+                                        <h6 className = "hotelSpec__info">Rooms: <span className="hotelSpec__span"> {hotel.maxGuests}</span></h6>
                                         {hotel.selfCatering ?(
-                                            <h6 className = "hotelCardSpec__info col-sm-3 col-xl-1">Self-catering: Yes</h6>
+                                            <h6 className = "hotelSpec__info"> Self-catering:  <span className="hotelSpec__span">Yes</span></h6>
 
                                         ):(
-                                            <h6 className = "hotelCardSpec__info col-sm-3  col-xl-1">Self-catering: No</h6>
+                                            <h6 className = "hotelSpec__info">Self-catering: <span className="hotelSpec__span">No</span></h6>
 
-                                        )}                                                                                                             
-                                    </div>  
-                                   <NavLink className = "hotelCardSpec__link" to = "/admin">See more</NavLink>                                 
-                                 </div>  
+                                        )}                                                                                                                                        
+                                    </div>
+                                </div>  
+                                <h6 className = "hotelSpec__info hotelSpec__email">Email: <span className="hotelSpec__span">{hotel.email}</span></h6>
                             </div>                             
                         </div>                    
                     </div>
-                </div>           
-            </div>               
+                        
        
     );
 }
