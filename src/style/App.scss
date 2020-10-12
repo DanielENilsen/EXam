@@ -82,15 +82,16 @@ body {
 
 }
 .heroText {
-    margin-top:15%;
+    margin-top:5%;
     display: inline-block;
-        color:white;
+    color:white;
     font-family: 'Baloo Chettan 2', cursive;   
 
     &__text {
         margin-top:4%;
         padding:0.6em;
-        font-size:1.7em;
+        font-size:1em;
+        color:$YellowButtoNCOlor;
     }
     
 }
@@ -100,18 +101,17 @@ body {
 .search {
   
     height: auto;
-    margin-top:40vh;
-    margin-left:10%;
-    width: 90%; 
+    margin-top:3vh;
+    margin-left:1%;
+    width: 95%; 
 
     input {
         height: 5vh;
     }  
 
-    &__input {
-      
+    &__input {      
         margin:1em; 
-        width: 90%;   
+        width: 95%;   
     }   
 
     
@@ -368,6 +368,8 @@ body {
 
 }
 
+
+
 .listApp {
     margin-top:25%;
     padding-top: 8%;    
@@ -389,12 +391,11 @@ body {
 }
 
 .heroText {
-    margin-top:15%;
-    width: 80%;     
+    margin-top:70%;  
 
     &__text {
-        font-size:2em;
-        margin-top:4%;
+        font-size:1.15em;
+        padding-top:10%;
     }
     
 }
@@ -452,14 +453,13 @@ body {
 }
 
 .innerBox { 
-    height: auto;
-    
+    height: 200px;    
     margin-bottom: 100px;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
-    width: 5%;
+    width: 80%;
     margin-left: 10%;   
 
 }
@@ -631,25 +631,23 @@ body {
     }
 
     
-.search {
-    margin-left:5%;      
+    .search {
+        margin-left:5%;
+        margin-top:0vh;    
+        width: 90%; 
 
-    height: auto;
-    margin-top:30vh;    
-    width: 90%; 
+        input {
+            height: 10vh;
+        }  
 
-    input {
-        height: 10vh;
-    }  
+        &__input {      
+            margin:1em; 
+            width: 90%;   
+        }   
 
-    &__input {      
-        margin:1em; 
-        width: 90%;   
-    }   
-
+        
     
-  
-}
+    }
 
     .cards {      
     
@@ -700,10 +698,10 @@ body {
         &__email {
             padding-bottom: 5%;       
             margin-left: 5%;
-        }    
-       
-    
+        }
     }
+
+
 
     .addNewHOtel { 
         margin-bottom: 10%;
@@ -721,6 +719,15 @@ body {
             font-size:1.5em;
         }
     }  
+    .heroText { 
+
+        &__text { 
+            text-align: center;
+            font-size: 1.7em;
+
+
+        }
+    }
     
     
     .headerLink  {       
@@ -780,31 +787,33 @@ body {
         }    
       
     }
-    .hotelSpec {     
-        
+    .hotelSpec { 
         &__headerText { 
             font-size: 2em;
             padding: 0.6em;
 
         }
         &__info {
-            font-size:0.8em;
-             
+            font-size:0.8em;             
         }
     }  
     .formCLa { 
         margin-bottom: 100px;
-
     }
-}
 
+    .heroText { 
+        &__text { 
+            text-align: center;
+            font-size: 1em;
+        }
+    }    
+}
 
 @media only screen and (min-width: 768px) {
 
     .headerLink  { 
         margin-top: 5%;
         margin-left:15%;
-        
     
         &__link {
             font-family: 'Baloo Chettan 2', cursive;   
@@ -815,8 +824,7 @@ body {
             margin-left:3%;
             color: $YellowButtoNCOlor;
             font-size:120%;
-        }     
-    
+        } 
     }
 
     .hotelSpec {        
@@ -836,6 +844,21 @@ body {
         margin-left: 20%;
 
     }
+
+    .heroText {
+        height: 100px;
+        margin-top: 50%;
+
+        &__text {
+            font-size: 1.5em;
+            font-family: 'Cinzel', serif;
+            text-align: center;
+        }
+    }
+    .search {
+        margin-top: 1%;
+    }
+
 }
 
 
