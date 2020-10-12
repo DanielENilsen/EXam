@@ -5,10 +5,14 @@ function HomePage() {
     return (
         <div className = "heroSection">
         <div className = "heroText">
-            <h1 className = "heroText__text">Find your booking on Holidaze</h1>
+            
         </div>
-        <SearchForm />
-        <CallOnHotel />            
+        <div className = "innerBox innerBox_frontPage">
+         <h1 className = "heroText__text">Find your booking on Holidaze</h1>
+
+        <SearchForm />  
+           
+    </div>
     </div>
     );
 }

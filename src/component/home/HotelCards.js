@@ -1,35 +1,35 @@
-import React from 'react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck,faLock, faUserShield} from '@fortawesome/free-solid-svg-icons'
-
-
-
-
-
-
-function CallOnHotel() {
+import   React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck,faLock, faUserShield} from '@fortawesome/free-solid-svg-icons';
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 
 
+
+function CallOnHotel() {   
+ 
     return (
+       
         <div className = "displayCards">
-            <div className = "cards">   
-                <FontAwesomeIcon className = "cards__icons cards__check" icon={faCheck} />     
-                <h3 className = "cards__header">Greet Review </h3>          
-                <p className = "cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse.</p>                
-            </div> 
-            <div className = "cards">                     
-                <FontAwesomeIcon  className = "cards__icons cards__lock" icon={faLock} />    
-                <h3 className = "cards__header">Site are safe to use</h3>       
-                <p className = "cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse.</p>                
-            </div> 
-            <div className = "cards">                  
-                <FontAwesomeIcon className = "cards__icons cards__shield" icon={faUserShield} />
-                <h3 className = "cards__header">Safe LoginSite</h3>  
-                <p className = "cards__text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse.</p>                
-            </div>                
+        <Container fluid>
+            <Row>
+                <Col lg={4} className = "boxGridHotels">                     
+                <Card.Img className = "boxGridHotels__image edithImage" src={'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} />
+                                   
+                    </Col> 
+                    <Col lg={4} className = "boxGridHotels"> 
+                <Card.Img className = "boxGridHotels__image edithImage" src={'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} />
+                    </Col> 
+                    <Col lg={4} className = "boxGridHotels">                  
+                <Card.Img className = "boxGridHotels__image edithImage" src={'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'} />
+                    </Col>                
+            </Row>
+        </Container> 
         </div>
     );
+    
 
 }
 

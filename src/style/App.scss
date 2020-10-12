@@ -20,7 +20,12 @@ body {
     
 }
 .cards {
-    background-color: #E4E4E4;
+    background-color:#1e2124;
+    color:$YellowButtoNCOlor;
+    margin-left:5%;        
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     height: auto;
     width: 95%;
     margin:3%;
@@ -28,15 +33,14 @@ body {
     &__icons { 
         margin-top:10%;
         margin-left:40%;
-        font-size: 5em;
+        font-size: 3em;
     }
 
     &__text { 
         margin-top:1%;
-        margin-left:1%;
-        width: 98%;        
+        width: 100%;        
         font-family: 'Open Sans', sans-serif;    
-        padding-bottom: 10%;
+        padding-bottom: 5%;
     }
 
     &__check {
@@ -68,19 +72,19 @@ body {
 }
 
 .heroSection {
-    background-image: url("../img/headeHero.jpg");
+ 
+    background-image: url("../img/pexels-pixabay-271624.jpg");
     width: 100%;
     height: 55vh;
     background-position: 50% 51%;
     background-repeat: no-repeat;
     background-size: cover;
-}
 
+}
 .heroText {
     margin-top:15%;
     display: inline-block;
-    background-color: $FooterColor;
-    color:white;
+        color:white;
     font-family: 'Baloo Chettan 2', cursive;   
 
     &__text {
@@ -92,10 +96,12 @@ body {
 }
 
 
+
 .search {
+  
     height: auto;
     margin-top:40vh;
-    margin-left:4%;
+    margin-left:10%;
     width: 90%; 
 
     input {
@@ -108,29 +114,8 @@ body {
         width: 90%;   
     }   
 
-    &__date {  
-        width: 40%;  
-        margin-left: 4%;   
-
-    }
-
-    &__rooms {
-        width: 45%; 
-        margin-left: 5%;
-    }
+    
   
-    &__Button {
-        margin-top: 5%;
-        margin-bottom: 5%;       
-        width: 50%;
-        margin-left:25%;
-        background-color: $BlueColor;
-        color:white;
-        font-weight: 700;
-        font-size:1.4em;
-        border:none;
-        
-    }
 }
 .viewMore {
     margin-top: 15%;
@@ -232,8 +217,7 @@ body {
 
 }
 
-.boostrapviewMore {
-   
+.boostrapviewMore {   
     width: 95%;
     background-color: white;
     height: auto ;
@@ -254,6 +238,7 @@ body {
         opacity: 1;
     }
 }
+
 
 .boxGridHotels  {
     padding-left:3%;
@@ -403,6 +388,17 @@ body {
     }
 }
 
+.heroText {
+    margin-top:15%;
+    width: 80%;     
+
+    &__text {
+        font-size:2em;
+        margin-top:4%;
+    }
+    
+}
+
 .edithForm {
     margin:1em;
     height:  auto;
@@ -457,14 +453,14 @@ body {
 
 .innerBox { 
     height: auto;
+    
     margin-bottom: 100px;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
-    width: 85%;
-    margin-left: 8%;
-    
+    width: 5%;
+    margin-left: 10%;   
 
 }
 
@@ -474,8 +470,6 @@ body {
     margin-left: 5%;
     padding-top:10px;
     padding-bottom: 5%;
-    
-
     
      &__box {
         
@@ -636,7 +630,29 @@ body {
        
     }
 
+    
+.search {
+    margin-left:5%;      
+
+    height: auto;
+    margin-top:30vh;    
+    width: 90%; 
+
+    input {
+        height: 10vh;
+    }  
+
+    &__input {      
+        margin:1em; 
+        width: 90%;   
+    }   
+
+    
+  
+}
+
     .cards {      
+    
     
         &__icons { 
             font-size: 8em;           
@@ -721,6 +737,19 @@ body {
             font-size:90%;
         } 
       
+    }
+
+    .heroSection {    
+        height: 50vh;       
+    }
+    
+    .heroText {
+        margin-top:15%;     
+   
+        &__text {
+            margin-top:4%;
+        }
+        
     }
     
     
@@ -814,13 +843,10 @@ body {
 
     
     .innerBox { 
-      
-    
         width: 70%;
-        margin-left: 15%;
-        
-
+        margin-left: 15%;     
     }
+
 
     .boxGridHotels  {
         padding-left:3%;
@@ -872,8 +898,7 @@ body {
         &__image {             
             width: 600px;
             height: 400px;
-            object-fit: cover;
-          
+            object-fit: cover;          
              
         }
     
@@ -907,7 +932,60 @@ body {
 
     .formCLa { 
         margin-left: 30%;
+    }
 
+    .heroSection {    
+
+        height: 50vh;
+        width: 100vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .heroText {
+        color: $YellowButtoNCOlor;        
+        height: 30%;
+        width: 50%;
+    
+        &__text {
+            padding:0.12em;
+            margin-left: 5%;
+            font-size:3.5em;
+        }        
+    }
+    
+    
+    .search {   
+            
+        background-color:none;          
+        margin-top:1vh;
+        margin-left:5%;
+        width: 90%;
+        padding-bottom: 3%; 
+        
+        
+    
+        input {
+            height: 5vh;
+        }  
+
+    
+        &__input {   
+              
+            margin-top:0%;
+            margin-left: 1%;            
+            width: 90%;  
+        }   
+    }
+    .heroText {
+        margin-left: 25%;        
+        margin-top:11%;     
+   
+        &__text {
+            margin-top:4%;
+        }
+        
     }
 
     .addNewHOtel { 
@@ -1061,6 +1139,73 @@ body {
 
         }
 
+    }
+
+    .cards {
+        background-color:$InfoDisplayColor;
+        color:black;
+        margin-left:0%;        
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        height: auto;
+        width: 55%;
+        margin:3%;
+    
+        &__icons { 
+            margin-top:10%;
+            margin-left:40%;
+            font-size: 5em;
+        }
+    
+        &__text { 
+            margin-top:1%;
+            width: 100%;        
+            font-family: 'Open Sans', sans-serif;    
+            padding-bottom: 5%;
+            margin-left: 1%;
+        }
+    
+        &__check {
+            color:rgb(0, 109, 9);
+        }
+        &__lock { 
+            color:$YellowButtoNCOlor;
+        }
+        &__shield { 
+            color:rgba(27, 54, 97, 0.637);
+        }
+    
+        &__header { 
+            font-family: 'Cinzel', serif;
+            margin-top:5%;
+            font-size:4vh;        
+        }
+    }
+    
+
+    .displayCards { 
+        margin-top: 1%;
+        margin-left: 1%;
+        
+    }
+
+    .edithImage { 
+        height: 80%;
+    }
+
+    .innerBox_frontPage {  
+        width: 70%;        
+        color: $YellowButtoNCOlor;
+        height: auto;
+        h1 {
+            text-align: center;
+            padding-top: 1%; 
+            font-family: 'Cinzel', serif;
+            font-size:2.5em;
+          
+        }
+     
     }
 
   
