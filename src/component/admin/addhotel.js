@@ -28,15 +28,18 @@ function AddHotel() {
 
     return (
       
-        <div className = "col-lg-5 col-xl-5">
-            <Form onSubmit={handleSubmit(onSubmit)} className= "loginForm addNewHOtel">
-                <h1 className = "loginForm__header">Add New Hotel</h1>
+        <div className = "edithForm">
+            <Form onSubmit={handleSubmit(onSubmit)} className= "loginForm">
+                <h1 className = "edithForm__header">Add New Hotel</h1>
                 <Form.Control className= "loginForm__input" name="name"  placeholder="Hotel Name" ref={register} />
                 <Form.Control className= "loginForm__input" name="email" placeholder="Email" ref={register} />
                 <Form.Control className= "loginForm__input" name="image" placeholder="Image" ref={register} />
-                <Form.Control className= "loginForm__input" name="description" placeholder="description" ref={register} />
+                <Form.Control className= "loginForm__input" name="description" placeholder="Description" ref={register} />
                 <Form.Control className= "loginForm__input" name="price" placeholder="Price" ref={register} />
-               <Button className="loginForm__submit btn btn-secondary" type="submit">Submit</Button>                        
+                <Form.Control className= "loginForm__input" name="maxGuests" placeholder="Rooms" ref={register} />
+                <Form.Group className = "edithForm__group">
+                     <Button className="loginForm__submit" type="submit">Submit</Button> 
+                </Form.Group>                       
             </Form>            
         </div>
       

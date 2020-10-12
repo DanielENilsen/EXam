@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import { BASE_URL, headers, PATCH } from "../apiBackend/ApiCall"
-
+import { BASE_URL, headers, PATCH } from "../apiBackend/ApiCall";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import DeleteHotel from "./DeleteHotel";
@@ -56,7 +55,6 @@ function EdithHotel() {
                         <Form.Label className = "edithForm__label" >Name</Form.Label>
                         <Form.Control  className = "edithForm__input" name="name" defaultValue={hotel.name} placeholder="Enter a name for the hotel" ref={register} />
                     </Form.Group>
-
                     <Form.Group>
                         <Form.Label className = "edithForm__label" >Email</Form.Label>
                         <Form.Control className = "edithForm__input" name="email" defaultValue={hotel.email} placeholder="Enter an email address" ref={register} />
@@ -66,11 +64,17 @@ function EdithHotel() {
                         <Form.Control className = "edithForm__input" name="image" defaultValue={hotel.image} ref={register} />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label className = "edithForm__label" >Text</Form.Label>
+                        <Form.Label className = "edithForm__label" >Description</Form.Label>
                         <Form.Control className = "edithForm__textArea" name="description" as="textarea" defaultValue={hotel.description} ref={register} />
                     </Form.Group>
-                    <Button  className = "edithForm__button" type="submit">Update</Button>
-                    <DeleteHotel id={id} />  
+                    <Form.Group>
+                        <Form.Label className = "edithForm__label" >Rooms</Form.Label>
+                        <Form.Control className = "edithForm__textArea" name="maxGuests" defaultValue={hotel.maxGuests} ref={register} />
+                    </Form.Group>
+                    <Form.Group className = "edithForm__group">
+                        <Button  className = "edithForm__button" type="submit">Update</Button>
+                        <DeleteHotel id={id} />  
+                    </Form.Group>
                 </Form>                        
               </div>
     );

@@ -32,9 +32,9 @@ function AdminContact() {
                     return (
                        <ul class="list-group meassageHotel__box">
                            <div className = "list-group-item">                               
-                                <h3>{massage.name}</h3>
+                                <h3   className = "meassageHotel__header">{massage.name}</h3>
                                 <div  className = "meassageHotel__inner">
-                                    <h6>{massage.email}</h6>
+                                    <h6 className = "meassageHotel__email">{massage.email}</h6>
                                     <p className = "meassageHotel__text">{massage.message}</p>
                                 </div>                                   
                             </div>

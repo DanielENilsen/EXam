@@ -20,12 +20,12 @@ function ContactUS() {
 
 
     return(
-        <div className = "col-lg-4 col-xl-4 formCLa">           
+        <div className = "col-md-8 col-lg-5 col-xl-5 formCLa">           
             <Form onSubmit={handleSubmit(onSubmit)}className= "addNewHOtel">
             <h6 className = "col-lg-12 col-xl-12 addNewHOtel__text">Feel free to send us a message </h6>
-                <Form.Control className= "addNewHOtel__input" name="name"  placeholder="Hotel Name" ref={register} />
-                <Form.Control className= "addNewHOtel__input" name="email"  placeholder="Hotel Name" ref={register} />
-                <Form.Control className= "addNewHOtel__textbox" as="textarea" rows="3" name="message"  ref={register} />
+                <Form.Control className= "addNewHOtel__input" name="name"  placeholder="Name" ref={register} />
+                <Form.Control className= "addNewHOtel__input" name="email"  placeholder="Email" ref={register} />
+                <Form.Control className= "addNewHOtel__textbox" as="textarea" rows="3" name="message" placeholder="Your meassage" ref={register} />
                 <Button className="addNewHOtel__submit btn btn-secondary" type="submit">Submit</Button>                        
             </Form>
         </div>

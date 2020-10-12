@@ -27,9 +27,23 @@ function Hotels() {
         }).catch((error) => console.log(error));
     }, []);
 
+    const searchFilter = function(e) {
+        const name = e.target.value.toLowerCase();    
+        const filteredArray = allHotel.filter(function(char) {
+        const nametype = char.name.toLowerCase();    
+        if (nametype.startsWith(name)) {        
+               return true;
+        }
+        return false;
+        });
+            
+        SetCurrectHotel(filteredArray);
+    };   
+
+
     return (
         <div className = "boostrapviewMore">
-            <ViewMoreSearch />
+            <ViewMoreSearch searchState={searchFilter} />
         <Container fluid>
             <Row>
                 {allHotel.map(hotel => {

@@ -161,11 +161,10 @@ body {
 }
 
 .loginForm {   
-    background-color: $InfoDisplayColor;
     animation: animatationnOne 2s;
 
-    height: 50vh;
-    margin-top: 25%;
+    height: auto;
+ 
 
     &__header {
         padding-top:10%;
@@ -191,7 +190,16 @@ body {
         height: 15%;
         width: 80%;
         margin-left:10vw;
-    }  
+        margin-top: 5%;
+        margin-bottom: 10%;
+        background-color: $YellowButtoNCOlor;
+        color:white;
+        border: none;
+    }
+    &__submit:hover {
+        background-color: $YellowButtoNCOlor;
+
+    }
 }
 
 .logoutButton {
@@ -215,11 +223,11 @@ body {
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     height: 20vh;
     font-family: 'Baloo Chettan 2', cursive;
-
-
+    
     &__text {
         margin: 5%;      
         font-size:10vw;
+        color: $YellowButtoNCOlor;
     }
 
 }
@@ -376,15 +384,16 @@ body {
 }
 
 .listApp {
-    margin-top:5%;
+    margin-top:25%;
     padding-top: 8%;    
     width: 90%;
     margin-bottom: 10%;
     padding-bottom: 3%;
-    margin-left: 5%;
+    margin-left: 6%;
 
-    &__list { margin-left: 15%;
-        width: 70%;
+    &__list { 
+        margin-left: 5%;
+        width: 90%;
     }
     
     a {
@@ -437,6 +446,13 @@ body {
         margin-bottom: 10%;
 
     }
+    &__button:hover { 
+        
+        background-color: #1e2124;
+        
+     
+
+    }
 }
 
 .innerBox { 
@@ -447,7 +463,7 @@ body {
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
     width: 85%;
-    margin-left: 5%;
+    margin-left: 8%;
     
 
 }
@@ -541,7 +557,6 @@ body {
     padding-top:5%;
     height: auto;
     animation: animatationnOne 1s;
-
     background-color: #ffffff;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
@@ -605,7 +620,7 @@ body {
 
     
     .loginForm {
-        height: 120vh;
+        height: auto;
         
         &__input {   
             font-size:1.5em;    
@@ -748,7 +763,12 @@ body {
              
         }
     }  
+    .formCLa { 
+        margin-bottom: 100px;
+
+    }
 }
+
 
 @media only screen and (min-width: 768px) {
 
@@ -770,8 +790,7 @@ body {
     
     }
 
-    .hotelSpec { 
-        
+    .hotelSpec {        
 
         font-size:1.4em; 
         
@@ -783,10 +802,25 @@ body {
             font-size:1em;             
         }
     }
+
+    .formCLa { 
+        margin-left: 20%;
+
+    }
 }
 
 
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1000px) {
+
+    
+    .innerBox { 
+      
+    
+        width: 70%;
+        margin-left: 15%;
+        
+
+    }
 
     .boxGridHotels  {
         padding-left:3%;
@@ -872,7 +906,7 @@ body {
     }
 
     .formCLa { 
-        margin-left: 35%;
+        margin-left: 30%;
 
     }
 
@@ -888,7 +922,8 @@ body {
         &__input {
             width: 80%;
             margin-left:10%;           
-            height: 1%;           
+            height: 1%;     
+            font-size:1em      
         }
         &__textbox {
             margin-left:10%; 
@@ -934,6 +969,99 @@ body {
 
     }
 
+
+    .listApp { 
+        font-size: 2em;
+        margin-top: 5%;
+      
+    }
+
+    .meassageHotel {   
+        margin-top: 5%;
+        &__inner   {
+            font-size: 1.5em;            
+
+        }
+       
+
+        &__header { 
+            color:$YellowButtoNCOlor;
+            font-size: 2em;
+            
+
+        }
+
+        &__email { 
+            font-size: 1.1em;
+
+        }
+    }
+
+    .edithForm {
+        margin-top: 5%;    
+        width: 70%;
+        margin-left: 15%;    
+    
+        &__header { 
+            color:$YellowButtoNCOlor;
+
+            padding-top: 3%;      
+            margin-left: 0%;
+            text-align: center;
+            font-size:5em;
+           
+            
+        }
+        &__label  {
+            margin-left: 10.5%;
+            font-size:1.1em;
+        }
+    
+        &__input {           
+            height: 4em;
+            width: 80%;
+        }
+    
+        &__textArea {
+            margin-left: 10%;
+            width: 80%;     
+            height: 50%;
+        }  
+
+        &__button { 
+            margin-top:5%;
+            margin-left: 10%;
+            background-color: #1e2124;
+            color:$YellowButtoNCOlor;
+            border-color:none;
+            margin-bottom: 10%;    
+            height:3em;
+            width: 5em;
+            font-size:  1.2em;
+        }
+
+        &__group {
+            margin-top: 4%;
+            margin-left: 67%;
+            padding-bottom: 5%;
+        }
+
+    }
+    .loginForm { 
+
+        &__submit { 
+            width: 40%; 
+            margin-left:40%;
+            background-color: #FF9100;
+            color: #ffffff;
+            border: none;
+        }
+        &__submit:hover {
+            background-color:$YellowButtoNCOlor;
+
+        }
+
+    }
 
   
 }
