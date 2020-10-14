@@ -14,7 +14,8 @@ import ViewMoreSearch from "../SearchForm/ViewMoreSearch";
 
 
 function Hotels() { 
-    const [allHotel, SetCurrectHotel] = useState([]);
+    const [allHotel, setCurrectHotel] = useState([]);
+    const [hotelCardFilter, setHotelFilter] = useState([]);
     const url =  BASE_URL + "establishments";
     const hotelFecth = { headers };
 
@@ -23,9 +24,12 @@ function Hotels() {
     useEffect(() => {
         fetch(url,hotelFecth).then((reponse) => reponse.json()).then((hotelJson) => {
             console.log(hotelJson);
-            SetCurrectHotel(hotelJson);
+            setCurrectHotel(hotelJson);
+            setHotelFilter(hotelJson);
         }).catch((error) => console.log(error));
     }, []);
+
+    
 
     const searchFilter = function(e) {
         const name = e.target.value.toLowerCase();    
@@ -37,16 +41,16 @@ function Hotels() {
         return false;
         });
             
-        SetCurrectHotel(filteredArray);
+        setHotelFilter(filteredArray);
     };   
 
 
     return (
         <div className = "boostrapviewMore">
-            <ViewMoreSearch searchState={searchFilter} />
+            <ViewMoreSearch searchState = {searchFilter}/>
         <Container fluid>
             <Row>
-                {allHotel.map(hotel => {
+                {hotelCardFilter.map(hotel => {
                     return (
                         <Col lg={3} className="boxGridHotels">
                             <Card>

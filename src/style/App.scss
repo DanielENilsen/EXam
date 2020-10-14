@@ -111,8 +111,22 @@ body {
 
     &__input {      
         margin:1em; 
-        width: 95%;   
-    }   
+        width: 100%;   
+    }  
+    
+    &__li { 
+        width: 90%;
+        margin-left: 1%;  
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
+          
+          
+    }
+    a {
+        font-size:1.3em;
+        color: #FF9100;
+    }
 
     
   
