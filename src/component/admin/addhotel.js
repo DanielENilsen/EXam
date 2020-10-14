@@ -9,15 +9,15 @@ import { useHistory } from "react-router-dom";
 
 function AddHotel() {   
 
-    const history = useHistory();
+    const historyLog = useHistory();
     const { register, handleSubmit} = useForm();
     
     var onSubmit = async function (data) {
-        const urlString = BASE_URL + "establishments";      
+        const urlString = `${BASE_URL}contacts`;     
         const POSTSTRING = { headers, method: "POST", body: JSON.stringify(data)};       
 
         await fetch(urlString, POSTSTRING);        
-        history.push("/listHotel");
+        historyLog.push("/listHotel");
     }
 
     return (

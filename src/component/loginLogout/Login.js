@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginSystem from '../form/form';
+import LoginSystem from '../loginForm/LoginSystem';
 
 function Login() {
     return(

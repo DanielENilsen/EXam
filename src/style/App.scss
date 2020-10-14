@@ -62,7 +62,6 @@ body {
 
 
 .imageIcon {
-    cursor: pointer;
     margin-top:1%;
     margin-left:1%;
 
@@ -119,8 +118,7 @@ body {
         margin-left: 1%;  
         -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
-        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75); 
-          
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);          
           
     }
     a {
@@ -202,12 +200,14 @@ body {
 }
 
 .logoutButton {
-    background-color: white;
+  
+    background-color: #1e2124;
     border:none;
-    color:#007bff;
+    
+    color:#ffffff;
 
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
@@ -398,7 +398,7 @@ body {
     }
     
     a {
-        color:rgb(31, 28, 28);
+        color:$YellowButtoNCOlor;
         font-size:1em;
         font-weight: bold;
     }
@@ -426,8 +426,9 @@ body {
 
 
     &__header { 
+        color:$YellowButtoNCOlor;
          padding-top: 10%;      
-        margin-left: 25%;
+        margin-left: 20%;
         font-size:2em;
        
         
@@ -467,7 +468,7 @@ body {
 }
 
 .innerBox { 
-    height: 200px;    
+    height: auto;    
     margin-bottom: 100px;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
@@ -484,6 +485,13 @@ body {
     margin-left: 5%;
     padding-top:10px;
     padding-bottom: 5%;
+
+    &__header { 
+        color:$YellowButtoNCOlor;
+        font-size: 2em;
+        
+
+    }
     
      &__box {
         
@@ -969,7 +977,8 @@ body {
     }
 
     .formCLa { 
-        margin-left: 30%;
+        margin-top: 10%;
+        margin-left: 34%;
     }
 
     .heroSection {    
@@ -1026,20 +1035,32 @@ body {
         
     }
 
+    .logoutButton {
+        background-color: #ffffff00;
+        border:none;
+        color:black;
+    
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     .addNewHOtel { 
         margin-top:25%; 
                   
-        &__text {         
+        &__text { 
+            text-align: center;        
             padding:1.5em;
-            font-size: 165%;
-            margin-left: 5%;
+            font-size: 200%;
+            margin-left: 0%;
         }
     
         &__input {
+            margin-top: 3%;
             width: 80%;
             margin-left:10%;           
             height: 1%;     
-            font-size:1em      
+            font-size:1.5em      
         }
         &__textbox {
             margin-left:10%; 
@@ -1081,6 +1102,10 @@ body {
             margin-left:3%;
             color: black;
             font-size:160%;
+        }
+        &__link:hover { 
+            color:black;
+            text-decoration: underline #FF9100; 
         }
 
     }

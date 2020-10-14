@@ -1,5 +1,5 @@
 import React from 'react';
-import Hotels from "../apiBackend/HotelDisplay";
+import Hotels from "./HotelDisplay";
 
 function ViewALL() { 
     return (

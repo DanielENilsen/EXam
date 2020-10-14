@@ -10,9 +10,9 @@ function LoginSystem() {
     const { logInUser } = useContext(AuthContext);
     const history = useHistory();
 
-    function onSubmit(data) {
+    var onSubmit = function onSubmit(data) {
         if(data.username === "Admin" && data.password === "Admin") {
-            logInUser(data.username, data.password)
+            logInUser(data.username, data.password);
             history.push("/admin");
         } else {
            console.log("Error");

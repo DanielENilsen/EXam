@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "../home/Home";
-import Login from "../login/Login";
+import Login from "../loginLogout/Login";
 import Admin from "../admin/Admin";
 import ProtectedRoute from "../routes/routes";
 import { SecureAuthSystem } from "../authcontext/AuthContext";
-import Navbar from "../nav/Nav";
+import Navbar from "../Navbar/Navbar";
 import ViewALL from "../viewAll/ViewAll";
 import Logo from "../../img/Logo.png";
 import ContactUS from "../contactus/ContactUs";
-import HotelCard from "../HotelCardSpec/HotelCard";
+import HotelCard from "../hotelCardSpec/HotelCard";
 
 
 function HeaderFrom () { 
@@ -21,7 +21,7 @@ function HeaderFrom () {
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <div className="container">
                             <a className="navbar-brand" href="#">
-                                <img src={Logo} className = "navbarinner__image"  to="/" />
+                                <img src={Logo} className = "navbarinner__image"  alt={"Logo"} />
                             </a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch,Redirect } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { SecureAuthSystem } from "../authcontext/AuthContext";
 import ProtectedRoute from "../routes/routes";
-import ListHotel from '../admin/AdminHotel';
-import AddHotel from "../admin/addhotel";
-import EdithHotel from "../admin/edithHotel";
-import AdminContact from "../admin/adminContact";
+import AdminHotel from '../admin/AdminHotel';
+import AddHotel from "../admin/Addhotel";
+import EdithHotel from "../admin/EdithHotel";
+import AdminContact from "../admin/AdminContact";
 
 
 
@@ -22,7 +22,7 @@ function NavBarAdmin() {
                     <NavLink className = "headerLink__link" to="/addhotel">Add Hotels</NavLink>                    
                 </div>            
             <Switch>             
-                <ProtectedRoute path="/listHotel" exact component={ListHotel} />
+                <ProtectedRoute path="/listHotel" exact component={AdminHotel} />
                 <ProtectedRoute path="/addhotel" exact component={AddHotel} />  
                 <ProtectedRoute path="/massage" exact component={AdminContact} />  
                 <ProtectedRoute path="/admin/hotels/edit/:id" exact component={EdithHotel} /> 

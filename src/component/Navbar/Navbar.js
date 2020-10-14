@@ -1,12 +1,8 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../authcontext/AuthContext";
-import LogOut from "../Logout/Logout";
-import ListGroup from 'react-bootstrap/ListGroup'
-
-
-
-
+import LogOut from "../loginLogout/Logout";
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
 function Navbar() { 
@@ -14,8 +10,7 @@ function Navbar() {
 
     return (
       
-        <ul className="navbar-nav ml-auto">
-        
+        <ul className="navbar-nav ml-auto">        
             <ListGroup className="nav-item">
                 <NavLink className = "nav-link" to = "/">Home</NavLink>
             </ListGroup>

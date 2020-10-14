@@ -10,11 +10,10 @@ function ContactUS() {
     const history = useHistory();
     const { register, handleSubmit } = useForm();
 
-
     var onSubmit = async function (data) {
         const createURl = `${BASE_URL}contacts`;
         const contactPOST = { headers, method: "POST", body: JSON.stringify(data)};        
-        await fetch(createURl, contactPOST).then((r) => r.json()).then((j) => console.log(j)).catch((error) => console.log(error))
+        await fetch(createURl, contactPOST)
         history.push("/");
     }
 

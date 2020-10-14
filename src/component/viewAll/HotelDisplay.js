@@ -1,16 +1,12 @@
 import React from 'react';
-import {headers,BASE_URL} from "./ApiCall";
+import {headers,BASE_URL} from "../apiBackend/ApiCall";
 import  { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import { NavLink } from "react-router-dom";
-import ViewMoreSearch from "../SearchForm/ViewMoreSearch";
-
-
-
-
+import ViewMoreSearch from "../searchForm/ViewMoreSearch";
 
 
 function Hotels() { 
