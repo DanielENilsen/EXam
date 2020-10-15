@@ -6,7 +6,7 @@ import ProtectedRoute from "../routes/routes";
 import AdminHotel from '../admin/AdminHotel';
 import AddHotel from "../admin/addhotel";
 import EdithHotel from "../admin/edithHotel";
-import AdminContact from "../admin/AdminContact";
+import AdminContact from "../admin/adminContact";
 
 
 
