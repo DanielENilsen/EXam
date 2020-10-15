@@ -5,13 +5,14 @@ import Button from "react-bootstrap/Button";
 import { BASE_URL, headers, DELETE } from "../apiBackend/ApiCall";
 import "react-confirm-alert/src/react-confirm-alert.css";
 
+// Some of this codes are from https://github.com/javascript-repositories/hotel-api-example-site/blob/master/src/components/admin/DeleteHotel.js
 
 function DeleteHotel(props) {
     const history = useHistory();
 
     function checkDelete() {
         confirmAlert({
-            title: "Confirm deletion",
+            title: "Sure you want to delete this Hotel ?",
             buttons: [
                 {
                     label: "yes",
@@ -24,17 +25,15 @@ function DeleteHotel(props) {
         });
     }
 
-    async function deleteHotel() {
-        const url = BASE_URL + "establishments/" + props.id;
+    var deleteHotel = async function () {
+        const url = `${BASE_URL}establishments/${props.id}`;
         const options = { headers, method: DELETE };
         await fetch(url, options);
         history.push("/admin/hotels");
     }
 
     return (
-        <Button className = "edithForm__button" onClick={checkDelete}>
-            Delete
-        </Button>
+        <Button className = "edithForm__button" onClick={checkDelete}>Delete</Button>
     );
 }
 

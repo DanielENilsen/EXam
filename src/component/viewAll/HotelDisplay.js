@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 import {headers,BASE_URL} from "../apiBackend/ApiCall";
-import  { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Col from 'react-bootstrap/Col'
@@ -15,11 +14,8 @@ function Hotels() {
     const url =  BASE_URL + "establishments";
     const hotelFecth = { headers };
 
-
-
     useEffect(() => {
         fetch(url,hotelFecth).then((reponse) => reponse.json()).then((hotelJson) => {
-            console.log(hotelJson);
             setCurrectHotel(hotelJson);
             setHotelFilter(hotelJson);
         }).catch((error) => console.log(error));
@@ -27,7 +23,7 @@ function Hotels() {
 
     
 
-    const searchFilter = function(e) {
+    var searchFilter = function(e) {
         const name = e.target.value.toLowerCase();    
         const filteredArray = allHotel.filter(function(char) {
         const nametype = char.name.toLowerCase();    

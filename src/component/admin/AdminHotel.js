@@ -8,9 +8,8 @@ function AdminHotel() {
     const hotelFecth = { headers };
 
     useEffect(() => {
-        fetch(url,hotelFecth).then((reponse) => reponse.json()).then((hotelJson) => {
-            SetCurrectHotel(hotelJson);
-        }).catch((error) => console.log(error));
+        fetch(url,hotelFecth).then((reponse) => reponse.json()).then((hotelJson) => 
+            SetCurrectHotel(hotelJson)).catch((error) => console.log(error));
     }, []);
 
 

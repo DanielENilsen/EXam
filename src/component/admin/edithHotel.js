@@ -27,11 +27,7 @@ function EdithHotel() {
 
 
     useEffect(() => {
-        fetch(url, options)
-            .then((response) => response.json())
-            .then((json) => {
-                setHotel(json);               
-            }).catch((error) => console.log(error));
+        fetch(url, options).then((response) => response.json()).then((json) =>setHotel(json)).catch((error) => console.log(error));
     }, []);
 
     var onSubmit = async function onSubmit(data) {

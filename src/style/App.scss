@@ -199,6 +199,20 @@ body {
     }
 }
 
+.deleteMessage { 
+    background-color: #1e2124;
+    border-color:none;
+
+    &:hover {
+        background-color: #1e2124;
+        color:rgb(250, 194, 11);
+
+    }
+
+    
+
+}
+
 .logoutButton {
   
     background-color: #1e2124;

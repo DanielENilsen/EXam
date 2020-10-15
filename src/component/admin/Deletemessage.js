@@ -5,15 +5,14 @@ import { useHistory } from "react-router-dom";
 import { confirmAlert } from "react-confirm-alert";
 import Button from "react-bootstrap/Button";
 
+// Some of this codes are from https://github.com/javascript-repositories/hotel-api-example-site/blob/master/src/components/admin/DeleteHotel.js
 
-
-function DeleteMessage(props) { 
+function DeleteMessage(props) {
 
     const history = useHistory();
-
     function checkDelete() {
         confirmAlert({
-            title: "Confirm deletion",
+            title: "Sure you want to delete this message ?",
             buttons: [
                 {
                     label: "yes",
@@ -26,17 +25,15 @@ function DeleteMessage(props) {
         });
     }
 
-    var deletemessage =  async function () {
-        const url = BASE_URL + "contacts/" + props.id;
+    var deletemessage =  async function () {        
+        const url = `${BASE_URL}contacts/${props.id}`;
         const options = { headers, method: DELETE };
         await fetch(url, options);
         history.push("/admin/message");
     }
 
     return (
-        <Button className = "edithForm__button" onClick={checkDelete}>
-            Delete
-        </Button>
+        <Button className = "deleteMessage" onClick={checkDelete}>Delete</Button>
     );
 }
 

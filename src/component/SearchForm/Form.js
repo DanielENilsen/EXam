@@ -18,7 +18,6 @@ function SearchForm () {
 
     useEffect(() => {
         fetch(url,hotelFecth).then((reponse) => reponse.json()).then((hotelJson) => {
-            console.log(hotelJson);
             setCurrectHotel(hotelJson);
             setHotelFilter(hotelJson);
         }).catch((error) => console.log(error));
@@ -26,7 +25,7 @@ function SearchForm () {
 
     
 
-    const searchFilter = function(e) {
+    var searchFilter = function(e) {
         const name = e.target.value.toLowerCase();    
         const filteredArray = allHotel.filter(function(char) {
         const nametype = char.name.toLowerCase();    

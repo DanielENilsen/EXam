@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import { SecureAuthSystem } from "../authcontext/AuthContext";
 import ProtectedRoute from "../routes/routes";
 import AdminHotel from '../admin/AdminHotel';
-import AddHotel from "../admin/Addhotel";
-import EdithHotel from "../admin/EdithHotel";
+import AddHotel from "../admin/addhotel";
+import EdithHotel from "../admin/edithHotel";
 import AdminContact from "../admin/AdminContact";
 
 
