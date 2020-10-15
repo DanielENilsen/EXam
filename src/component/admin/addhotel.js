@@ -13,7 +13,7 @@ function AddHotel() {
     const { register, handleSubmit} = useForm();
     
     var onSubmit = async function (data) {
-        const urlString = `${BASE_URL}contacts`;     
+        const urlString = `${BASE_URL}establishments`;     
         const POSTSTRING = { headers, method: "POST", body: JSON.stringify(data)};       
 
         await fetch(urlString, POSTSTRING);        

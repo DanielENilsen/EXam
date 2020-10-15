@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 function HotelCard() {
     let { id } = useParams();
     const options = { headers };
-    const fetchUrl = BASE_URL + "establishments/" + id;
+    const fetchUrl = `${BASE_URL}establishments/${id}`;
     const [hotel, setHotel] = useState([]); 
 
     useEffect(() => {
